@@ -1,0 +1,329 @@
+.color1 {color: #ada976;}
+.color2 {color: #c7c298;}
+.color3 {color: #0a0700;}
+.color4 {color: #7c7772;}
+.color5 {color: #f8f8f8;}
+
+@import url('https://fonts.cdnfonts.com/css/gabriola');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f8f8;
+    font-family: 'Gabriola', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header__principal .header__contenido{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/fondo-nav.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.titulo__principal {
+    color: rgba(1, 1, 1, 0);
+    width: 24em;
+    height: 16em;
+    background-image: url('/img/logo-blanco.png');
+    background-size: cover;
+    background-position: center;
+    margin-right: 4rem;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5em;
+    text-align: right;
+    padding-right: 5rem;
+}
+
+.navegacion a {
+    color: #f8f8f8;
+    margin-top: 0.2em;
+}
+
+.navegacion a:hover {
+    color: #c7c298;
+}
+
+.contenido {
+    margin: 0em 5em;
+    padding: 3em 0em;
+    text-align: center;
+}
+
+.contenido .titulo {
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.reserva__descripcion {
+    font-size: 2em;
+    line-height: 1.5em;
+    color: #7c7772;
+}
+
+.reserva__avisos {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reserva__items {
+    display: grid;
+    grid-template-areas: 
+        "icono"
+        "titulo"
+        "descripcion";
+    grid-template-columns: 45px auto;
+    grid-template-rows: 45px auto;
+    gap: 1em;
+    margin-right: 2em;
+    width: calc(33.33% - 2em);
+}
+
+.reserva__items:last-child {
+    margin-right: 0;
+}
+
+.icono__item {
+    grid-area: icono;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2; 
+    width: 100%;
+    height: 100%;
+}
+
+.titulo__item {
+    padding-top: 0.15em;
+    font-size: 2.2em;
+    color: #0a0700;
+    text-align: left;
+    grid-area: titulo;
+    grid-row: 1 / 2;
+    grid-column: 2 / end; 
+}
+
+.item__descripcion {
+    font-size: 2em;
+    text-align: left;
+    line-height: 1em;
+    color: #7c7772;
+    grid-area: descripcion;
+    grid-row: 2 / end;
+    grid-column: 2 / end;   
+    
+}
+
+.ubicacion {
+    width: 100%;
+    border: 0.5em solid #ada976;
+    border-radius: 2em;
+}
+
+.menu__destacado {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__opciones {
+    display: grid;
+    grid-template-areas: 
+        "imagen"
+        "cuerpo";
+    grid-template-columns: auto;
+    grid-template-rows: 500px auto;
+    row-gap: 2em;
+    margin-right: 1.5em;
+    width: calc(25% - 1.5em);
+}
+
+.menu__opciones:last-child {
+    margin-right: 0;
+}
+
+.menu__opciones__imagen {
+    grid-area: imagen;
+    border: 0.3em solid #ada976;
+    border-radius: 1em;
+    width: 100%;  font-weight: bold;
+    height: 100%;
+}
+
+.menu__opciones__cuerpo {
+    text-align: left;
+    grid-area: cuerpo;
+    display: grid;
+    grid-template-areas: 
+        "titulo"
+        "descripcion";
+    grid-template-columns: 100%;
+    grid-template-rows: 6em auto;
+}
+
+.opciones__titulo {
+    grid-area: titulo;
+    color: #0a0700;
+    font-size: 2.2em;
+}
+
+.opciones__descripcion {
+    grid-area: descripcion;
+    color: #7c7772;
+    font-size: 2em;
+}
+
+.menu__pdf {
+    text-align: left
+}
+
+.menu__pdf a {
+    color: #0a0700;
+    font-size: 2.2em;
+}
+
+.pie__de__pagina {
+    background-color: #0a0700;
+}
+
+.pie__de__pagina .contenido {
+    padding: 0;
+    text-align: left;
+    color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__footer {
+    width: 300px;
+    height: 200px;
+}
+
+.aviso__legal {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.aviso__item a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+.aviso__item a:hover {
+    color: #ada976;
+}
+
+.contacto__footer {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+} 
+
+.contacto__footer a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+.contacto__footer a:hover {
+    color: #ada976;
+}
+
+/*--- Estilo encavezado faqs-contacto-legal ---*/
+
+.encavezado {
+    width: 100%;
+    height: 10%;
+    background:#0a0700;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo__encavezado {
+    color: rgba(1, 1, 1, 0);
+    width: 500px;
+    height: 100px;
+    background-image: url('/img/logo-blanco-lineal.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+/*--- Estilo FAQs ---*/
+
+.cuestionario {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuestionario__item {
+    text-align: left;
+    border-bottom: 2px solid #0a0700;
+}
+
+.pregunta {
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+.respuesta {
+    font-size: 2rem;
+    line-height: 1.7rem;
+    color: #7c7772;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    list-style-type: decimal;
+}
+
+.olist {
+    padding-left: 3.5em;
+}
+
+/*--- Estilo contacto ---*/
+
+label {
+    display: block;
+    font-size: 1.5em;
+}
+
+.input__form {
+    margin-bottom: 1.5em;
+    width: 400px;
+    height: 30px;
+}
+
+.checkbox {
+    margin-top: 1em;
+}
+
+.enviar {
+    width: 10%;
+    height: 35px;
+    margin-top: 1em;
+    color: #0a0700;
+    background: #f8f8f8;
+    border: 0.2em solid;
+    border-color: #0a0700;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: #ada976;
+    transform: scale(1.1);
+}
+
