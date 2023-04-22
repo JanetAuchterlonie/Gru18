@@ -115,7 +115,7 @@ a {
     text-align: left;
     grid-area: titulo;
     grid-row: 1 / 2;
-    grid-column: 2 / end; 
+    grid-column: 2 / 3; 
 }
 
 .item__descripcion {
@@ -124,8 +124,8 @@ a {
     line-height: 1em;
     color: #7c7772;
     grid-area: descripcion;
-    grid-row: 2 / end;
-    grid-column: 2 / end;   
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;   
     
 }
 
@@ -295,6 +295,12 @@ a {
 
 /*--- Estilo contacto ---*/
 
+form {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+}
+
 label {
     display: block;
     font-size: 1.5em;
@@ -302,8 +308,12 @@ label {
 
 .input__form {
     margin-bottom: 1.5em;
-    width: 400px;
+    width: 100%;
     height: 30px;
+}
+
+#mensaje {
+    width: 100%;
 }
 
 .checkbox {
@@ -311,7 +321,7 @@ label {
 }
 
 .enviar {
-    width: 10%;
+    width: 30%;
     height: 35px;
     margin-top: 1em;
     color: #0a0700;
@@ -327,3 +337,28 @@ label {
     transform: scale(1.1);
 }
 
+/*--- Estilo Legal ---*/
+
+.legal .contenido {
+    text-align: left;
+}
+
+.idioma {
+    font-size: 3em;
+    margin-bottom: 0.5rem;
+    color: #7c7772;
+}
+
+.apartado {
+    font-size: 2.5em;
+    margin: 0.5rem;
+    color: #7c7772;
+}
+
+.legal .contenido p {
+    margin: 0 0 0.5em 1em;
+    font-size: 1.5em;
+    line-height: 1.5rem;
+    color: #7c7772;
+    
+}
