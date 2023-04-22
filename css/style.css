@@ -20,7 +20,7 @@ a {
     text-decoration: none;
 }
 
-.header__principal .header__contenido{
+.header__contenido{
     width: 100%;
     height: 100vh;
     background-image: url('/img/fondo-nav.jpg');
@@ -146,7 +146,7 @@ a {
         "imagen"
         "cuerpo";
     grid-template-columns: auto;
-    grid-template-rows: 500px auto;
+    grid-template-rows: 400px auto;
     row-gap: 2em;
     margin-right: 1.5em;
     width: calc(25% - 1.5em);
@@ -276,12 +276,12 @@ a {
 }
 
 .pregunta {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     padding-top: 1.5rem;
 }
 
 .respuesta {
-    font-size: 2rem;
+    font-size: 2em;
     line-height: 1.7rem;
     color: #7c7772;
     margin-top: 2rem;
@@ -360,5 +360,114 @@ label {
     font-size: 1.5em;
     line-height: 1.5rem;
     color: #7c7772;
+    
+}
+
+/*--- Media Queries ---*/
+
+/* Extra small devices (600px and down) */
+@media only screen and (max-width: 600px) {
+
+    body {
+        font-size: 10px;
+    }
+
+    .titulo__encavezado {
+        width: 80%;
+        height: 40px;
+    }
+
+    .contenido {
+        margin: 0 2em;
+    }
+
+    .contenido .titulo {
+        margin-bottom: 1rem;
+    }
+
+    .pie__de__pagina .contenido {
+        flex-direction: column;
+    }
+
+    /* --- Pagina Principal ---*/
+
+    .header__contenido {
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .titulo__principal {
+        margin: 0;
+        background-image: url(/img/logo-blanco-centrado.png);
+        width: 100%;
+    }
+
+    .navegacion {
+        font-size: 4em;
+        text-align: center;
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    .reserva__avisos {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .reserva__items {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+    .reserva__items:first-child {
+        margin: 0;
+    }
+
+    .titulo__item {
+        padding-top: 0.7rem;
+    }
+
+    .menu__destacado {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 24px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .menu__opciones {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+
+    .menu__pdf {
+        margin-top: 1rem;
+    }
+
+    /*--- Contacto ---*/
+
+    form {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Small devices (600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1200px) {
     
 }
