@@ -130,6 +130,7 @@ a {
 }
 
 .ubicacion {
+    box-sizing: border-box;
     width: 100%;
     border: 0.5em solid #ada976;
     border-radius: 2em;
@@ -148,15 +149,11 @@ a {
     grid-template-columns: auto;
     grid-template-rows: 400px auto;
     row-gap: 2em;
-    margin-right: 1.5em;
     width: calc(25% - 1.5em);
 }
 
-.menu__opciones:last-child {
-    margin-right: 0;
-}
-
 .menu__opciones__imagen {
+    box-sizing: border-box;
     grid-area: imagen;
     border: 0.3em solid #ada976;
     border-radius: 1em;
@@ -369,12 +366,102 @@ label {
 @media only screen and (max-width: 600px) {
 
     body {
-        font-size: 10px;
+        font-size: 12px;
     }
 
-    .titulo__encavezado {
+    .titulo__encabezado {
         width: 80%;
         height: 40px;
+    }
+
+    .contenido {
+        margin: 0 2em;
+    }
+
+    .contenido .titulo {
+        margin-bottom: 1rem;
+    }
+
+    .pie__de__pagina .contenido {
+        flex-direction: column;
+    }
+
+    /* --- Pagina Principal ---*/
+
+    .header__contenido {
+        align-items: center;
+    }
+
+    .titulo__principal {
+        margin: 0;
+        background-image: url(/img/logo-blanco-centrado.png);
+        width: 100%;
+    }
+
+    .navegacion {
+        font-size: 4em;
+        text-align: center;
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    .reserva__avisos {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .reserva__items {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+    .reserva__items:first-child {
+        margin: 0;
+    }
+
+    .titulo__item {
+        padding-top: 0.7rem;
+    }
+
+    .menu__destacado {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 24px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .menu__opciones {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        margin-right: 1.5em;
+    }
+
+    .menu__pdf {
+        margin-top: 1rem;
+    }
+
+    /*--- Contacto ---*/
+
+    form {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Small devices (600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .titulo__principal {
+        height: 22em;
+    }
+
+    .titulo__encabezado {
+        width: 80%;
+        height: 60px;
     }
 
     .contenido {
@@ -428,16 +515,13 @@ label {
     }
 
     .menu__destacado {
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scroll-padding: 24px;
-        margin: 0 auto;
-        padding: 0 2rem;
+        flex-wrap: wrap;
     }
 
     .menu__opciones {
-        flex: 0 0 100%;
-        scroll-snap-align: start;
+        box-sizing: border-box;
+        width: 45%;
+        margin-right: 2em;
     }
 
     .menu__pdf {
@@ -447,27 +531,73 @@ label {
     /*--- Contacto ---*/
 
     form {
-        display: block;
-        width: 100%;
+        display: inline-block;
+        width: 70%;
     }
 }
 
-/* Small devices (600px and up) */
-@media only screen and (min-width: 600px) {
-    
-}
-
 /* Medium devices (768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 870px) {
+    body {
+        font-size: 16px;
+    }
 
-}
+    .titulo__encabezado {
+        width: 80%;
+        height: 60px;
+    }
 
-/* Large devices (992px and up) */
-@media only screen and (min-width: 992px) {
+    .contenido {
+        margin: 0 2em;
+    }
 
-}
+    .contenido .titulo {
+        margin-bottom: 1rem;
+    }
 
-/* Extra large devices (1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
+    .pie__de__pagina .contenido {
+        flex-direction: column;
+    }
+
+    /* --- Pagina Principal ---*/   
+
+    .reserva__avisos {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .reserva__items {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+    .reserva__items:first-child {
+        margin: 0;
+    }
+
+    .titulo__item {
+        padding-top: 0.7rem;
+    }
+
+    .menu__destacado {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .menu__opciones {
+        box-sizing: border-box;
+        width: 35%;
+        margin-right: 2em;
+    }
+
+    .menu__pdf {
+        margin-top: 1rem;
+    }
+
+    /*--- Contacto ---*/
+
+    form {
+        display: inline-block;
+        width: 50%;
+    }
 }
