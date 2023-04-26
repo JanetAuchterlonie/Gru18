@@ -19,6 +19,11 @@ body {
 
 a {
     text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover{
+    transform: scale(1.2);
 }
 
 .header__contenido{
@@ -186,7 +191,7 @@ a {
 }
 
 .menu__pdf {
-    text-align: left
+    text-align: left;
 }
 
 .menu__pdf a {
