@@ -1,64 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon/favicon-ta.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.cdnfonts.com/css/gabriola" rel="stylesheet">
-                
-    <title>Contacto</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon/favicon-ta.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/gabriola" rel="stylesheet" />
 
-<body>
+    <title>Contacto</title>
+  </head>
+
+  <body>
     <header>
-        <nav class="encabezado">
-            <h1 class="titulo__encabezado">Logo-Todo-Argento</h1>
-        </nav>
+      <nav class="encabezado">
+        <h1 class="titulo__encabezado">Logo-Todo-Argento</h1>
+      </nav>
     </header>
 
     <main>
-        <div class="contenido">
-            <h2 class="titulo">Contacto</h2>
-            <form>
-                <label for="nombre__apellido">Nombre y Apellido</label>
-                <input type="text" id="nombre__apellido" class="input__form" required>
+      <div class="contenido">
+        <h2 class="titulo">Contacto</h2>
+        <form class="formulario" id="formulario">
+          <!-- ---- Grupo nombre ---- -->
 
-                <label for="e__mail">E-mail</label>
-                <input type="email" id="e__mail" class="input__form" required placeholder="email@dominio.com">
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre y Apellido</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="nombre" />
+              <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario__input-error">El Nombre y Apellido no debe contener numeros ni caracteres especiales</p>
+          </div>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" cols="43" rows="10" required></textarea>
+          <!-- ---- Grupo email ---- -->
 
-                <label class="checkbox">
-                    <input type="checkbox" required> Acepto las <a href="/legal.html" target="_blank">Condiciones</a>
-                </label>
+          <div class="formulario__grupo" id="grupo__email">
+            <label for="email" class="formulario__label">E-mail</label>
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="email" id="email" placeholder="email@dominio.com" />
+              <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario__input-error">El email ingresado no es valido</p>
+          </div>
 
-                <input type="submit" value="Enviar" class="enviar">
-            </form>
-        </div>
+          <!-- ---- Grupo mensaje ---- -->
+
+          <div class="formulario__grupo" id="grupo__mensaje">
+            <label for="mensaje" class="formulario__label">Mensaje</label>
+            <div class="formulario__grupo-input">
+              <textarea class="formulario__input-mensaje" name="mensaje" id="mensaje" cols="43" rows="10"></textarea>
+            </div>
+            <p class="formulario__input-error">Es necesario agregar un mensaje</p>
+          </div>
+
+          <!-- ---- Grupo de terminos y condiciones ---- -->
+
+          <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+              <input class="formulario__checkbox" type="checkbox" name=.formulario__btn"terminos" id="terminos" /> Acepto las
+              <a href="/legal.html" target="_blank">Condiciones</a>
+            </label>
+          </div>
+
+          <div class="formulario__grupo formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fa-solid fa-triangle-exclamation"></i><strong> Error:</strong>Hay campos sin completar o son incorrectos</p>
+          </div>
+
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button class="formulario__btn" type="submit">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente</p>
+          </div>
+        </form>
+      </div>
     </main>
 
     <footer class="pie__de__pagina">
-        <div class="contenido">
-            <img class="logo__footer" src="img/logo-blanco-centrado.png" alt="imagen-logo-blnaco">
+      <div class="contenido">
+        <img class="logo__footer" src="img/logo-blanco-centrado.png" alt="imagen-logo-blnaco" />
 
-            <div class="aviso__legal">
-                <ul class="aviso__lista">
-                    <li class="aviso__item">© Copyright 2021.</li>
-                    <li class="aviso__item">Todos los derechos reservados.</li>
-                    <li class="aviso__item"><a href="/legal.html" target="_blank">Política de privacidad y aviso legal</a></li>
-                    <li class="aviso__item"><a href="/legal.html" target="_blank">Tratamiento de datos personales</a></li>
-                </ul>
-            </div>
-
-            <div class="contacto__footer">
-                <h2>Contacto</h2>
-                <a href="">info@todo_argento.com</a>
-            </div>
+        <div class="aviso__legal">
+          <ul class="aviso__lista">
+            <li class="aviso__item">© Copyright 2021.</li>
+            <li class="aviso__item">Todos los derechos reservados.</li>
+            <li class="aviso__item">
+              <a href="/legal.html" target="_blank">Política de privacidad y aviso legal</a>
+            </li>
+            <li class="aviso__item">
+              <a href="/legal.html" target="_blank">Tratamiento de datos personales</a>
+            </li>
+          </ul>
         </div>
+
+        <div class="contacto__footer">
+          <h2>Contacto</h2>
+          <a href="">info@todo_argento.com</a>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <script src="https://kit.fontawesome.com/4197db9fc0.js" crossorigin="anonymous"></script>
+  </body>
 </html>

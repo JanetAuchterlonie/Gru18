@@ -221,6 +221,7 @@ a:hover{
 }
 
 .aviso__legal {
+    width: 300px;
     text-align: center;
     font-size: 1.5em;
     line-height: 1.5em;
@@ -236,6 +237,7 @@ a:hover{
 }
 
 .contacto__footer {
+    width: 300px;
     text-align: center;
     font-size: 1.5em;
     line-height: 1.5em;
@@ -301,46 +303,148 @@ a:hover{
 
 /*--- Estilo contacto ---*/
 
-form {
-    display: inline-block;
-    width: 30%;
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
     text-align: left;
 }
 
-label {
+.formulario__grupo {
+    grid-column: 2 / 2;
+}
+
+.formulario__label {
     display: block;
-    font-size: 1.5em;
-}
-
-.input__form {
-    margin-bottom: 1.5em;
-    width: 100%;
-    height: 30px;
-}
-
-#mensaje {
-    width: 100%;
-}
-
-.checkbox {
-    margin-top: 1em;
-}
-
-.enviar {
-    width: 30%;
-    height: 35px;
-    margin-top: 1em;
-    color: #0a0700;
-    background: #f8f8f8;
-    border: 0.2em solid;
-    border-color: #0a0700;
-    transition: 1s all;
+    font-size: 1.8em;
+    padding: 10px;
     cursor: pointer;
 }
 
-.enviar:hover {
-    background-color: #ada976;
-    transform: scale(1.1);
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    box-sizing: border-box;
+    width: 100%;
+    background: #f1eded;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 2.5em 0 1em;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus {
+    border: 3px solid #ada976;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__input-mensaje {
+    box-sizing: border-box;
+    width: 100%;
+    background: #f1eded;
+    border: 3px solid transparent;
+    border-radius: 3px;
+}
+
+.formulario__input-mensaje:focus {
+    border: 3px solid #ada976;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__input-error {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    z-index: 100;
+    font-size: 1rem;
+    opacity: 0;
+}
+
+.formulario__checkbox {
+    margin-right: 10px;
+}
+
+.formulario__mensaje {
+    font-size: 1.2rem;
+    height: auto;
+    line-height: 1rem;
+    background: #f66060;
+    padding: 0 1rem;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__btn {
+    height: 3rem;
+    line-height: 3rem;
+    width: 30%;
+    background: #0a0700;
+    color: #f8f8f8;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+}
+
+.formulario__btn:hover {
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__mensaje-exito {
+    font-size: 1.5rem;
+    color: #119200;
+    margin-top: 1rem;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+/*--- Estilos de validacion ---*/
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #119200;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-correcto .formulario__input {
+    border: 3px solid #bb2929;
 }
 
 /*--- Estilo Legal ---*/
@@ -403,7 +507,7 @@ label {
 
     .titulo__principal {
         margin: 0;
-        background-image: url(/img/logo-blanco-centrado.png);
+        background-image: url('/img/logo-blanco-centrado.png');
         width: 100%;
     }
 
@@ -452,10 +556,16 @@ label {
 
     /*--- Contacto ---*/
 
-    form {
-        display: block;
-        width: 100%;
+    .formulario {
+        grid-template-columns: 1fr;
+        gap: unset;
+        row-gap: 1.5rem;
     }
+
+    .formulario__grupo {
+        grid-column: 1 / 1;
+    }
+
 }
 
 /* Small devices (600px and up) */
@@ -539,9 +649,10 @@ label {
 
     /*--- Contacto ---*/
 
-    form {
-        display: inline-block;
-        width: 70%;
+    .formulario {
+        grid-template-columns: 15% 70% 15%;
+        gap: unset;
+        row-gap: 1.5rem;
     }
 }
 
@@ -605,9 +716,10 @@ label {
 
     /*--- Contacto ---*/
 
-    form {
-        display: inline-block;
-        width: 50%;
+    .formulario {
+        grid-template-columns: 15% 70% 15%;
+        gap: unset;
+        row-gap: 1.5rem;
     }
 }
 
@@ -620,7 +732,7 @@ label {
 
     .titulo__encabezado {
         width: 80%;
-        height: 60px;
+        height: 80px;
     }
 
     .contenido {
@@ -672,8 +784,9 @@ label {
 
     /*--- Contacto ---*/
 
-    form {
-        display: inline-block;
-        width: 50%;
+    .formulario {
+        grid-template-columns: 15% 70% 15%;
+        gap: unset;
+        row-gap: 1.5rem;
     }
 }
