@@ -402,6 +402,7 @@ a:hover{
 }
 
 .formulario__btn {
+    margin-top: 1rem;
     height: 3rem;
     line-height: 3rem;
     width: 30%;
