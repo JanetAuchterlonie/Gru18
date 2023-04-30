@@ -359,6 +359,7 @@ a:hover{
 
 .formulario__input-error {
     font-size: 1.2rem;
+    color: #bb2929;
     margin-top: 1rem;
     display: none;
 }
@@ -438,12 +439,12 @@ a:hover{
     color: #bb2929;
 }
 
-.formulario__grupo-correcto .formulario__validacion-estado {
+.formulario__grupo-incorrecto .formulario__validacion-estado {
     color: #bb2929;
     opacity: 1;
 }
 
-.formulario__grupo-correcto .formulario__input {
+.formulario__grupo-incorrecto .formulario__input {
     border: 3px solid #bb2929;
 }
 
