@@ -1,15 +1,20 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
+formulario.reset();	
+
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
   telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+	fecha: /^\2(\d{4})(\/|-)(0[1-9]|1[0-2])(\/|-)([0-2][0-9]|3[0-1])$/, 
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 } 
 
 const campos = {
 	nombre: false,
 	telefono: false,
+	fecha: false,
+	hora: false,
 	email: false
 }
 
@@ -21,6 +26,9 @@ const validarFormulario = (e) => {
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
+		case "fecha":
+			validarCampo(expresiones.fecha, e.target, 'fecha');
+		break;
 		case "email":
 			validarCampo(expresiones.email, e.target, 'email');
 		break;
@@ -28,6 +36,7 @@ const validarFormulario = (e) => {
 }
 
 const validarCampo = (expresion, input, campo) => {
+	console.log(input.value);
 	if(expresion.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
@@ -54,7 +63,14 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.nombre && campos.email  && terminos.checked){
+	
+	document.querySelectorAll('.hora').forEach((hora) => {
+		if(hora.checked) {
+			campos['hora'] = true;
+		}
+	});
+
+	if(campos.nombre && campos.email && campos.hora && campos.telefono && campos.fecha && terminos.checked){
 
 		formulario.reset();
 
