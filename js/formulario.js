@@ -3,19 +3,23 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+  telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 } 
 
 const campos = {
 	nombre: false,
-	email: false,
+	telefono: false,
+	email: false
 }
 
 const validarFormulario = (e) => {
 	switch (e.target.name) {
 		case "nombre":
 			validarCampo(expresiones.nombre, e.target, 'nombre');
+		break;
+		case "telefono":
+			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
 		case "email":
 			validarCampo(expresiones.email, e.target, 'email');
@@ -51,8 +55,6 @@ formulario.addEventListener('submit', (e) => {
 
 	const terminos = document.getElementById('terminos');
 	if(campos.nombre && campos.email  && terminos.checked){
-
-		const cliente = new Cliente();
 
 		formulario.reset();
 
