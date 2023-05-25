@@ -590,7 +590,7 @@ a {
 
 }
 
-/* Small devices (600px and up) */
+/* Small devices (600px and 768px) */
 @media only screen and (min-width: 600px) and (max-width: 768px) {
     body {
         font-size: 14px;
@@ -678,7 +678,7 @@ a {
     }
 }
 
-/* Medium devices (768px and up) */
+/* Medium devices (768px and 992px) */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     body {
         font-size: 16px;
@@ -745,70 +745,3 @@ a {
     }
 }
 
-/* Medium devices (768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-
-    body {
-        font-size: 16px;
-    }
-
-    .titulo__encabezado {
-        width: 80%;
-        height: 80px;
-    }
-
-    .contenido {
-        margin: 0 2em;
-    }
-
-    .contenido .titulo {
-        margin-bottom: 1rem;
-    }
-
-    .pie__de__pagina .contenido {
-        flex-direction: column;
-    }
-
-    /* --- Pagina Principal ---*/   
-
-    .reserva__avisos {
-        margin-top: 1rem;
-        flex-direction: column;
-    }
-
-    .reserva__items {
-        width: 100%;
-        margin: 2rem 0 0 0;
-    }
-
-    .reserva__items:first-child {
-        margin: 0;
-    }
-
-    .titulo__item {
-        padding-top: 0.7rem;
-    }
-
-    .menu__destacado {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .menu__opciones {
-        box-sizing: border-box;
-        width: 35%;
-        margin-right: 2em;
-    }
-
-    .menu__pdf {
-        margin-top: 1rem;
-    }
-
-    /*--- Contacto ---*/
-
-    .formulario {
-        grid-template-columns: 15% 70% 15%;
-        gap: unset;
-        row-gap: 1.5rem;
-    }
-}
