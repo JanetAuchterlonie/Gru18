@@ -44,6 +44,22 @@
             <p class="formulario__input-error">El número no puede contener letras, puntos, comas, espacios ni caracteres especiales</p>
           </div>
 
+          <!-- ---- Clima ---- -->
+
+          <div class="grupo__clima formulario__grupo">
+            <h3 class="formulario__label titulo__clima">Clima semanal</h3>
+            <div class="info__clima">
+              <template id="template__card">
+                <div class="grupo__clima-card">
+                  <p class="grupo__clima-dia"></p>
+                  <img class="grupo__clima-icono" />
+                  <p class="grupo__clima-temperatura-min"></p>
+                  <p class="grupo__clima-temperatura-max"></p>
+                </div>
+              </template>
+            </div>
+          </div>
+
           <!-- ---- Grupo Fecha de reserva y hora ---- -->
 
           <div class="formulario__grupo" id="grupo__fecha">
@@ -132,6 +148,7 @@
       </div>
     </footer>
     <script src="https://kit.fontawesome.com/4197db9fc0.js" crossorigin="anonymous"></script>
+    <script src="js/tiempo.js"></script>
     <script src="js/formulario.js"></script>
   </body>
 </html>

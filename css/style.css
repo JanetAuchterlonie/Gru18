@@ -428,6 +428,29 @@ a {
     display: block;
 }
 
+.grupo__clima {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__clima {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.grupo__clima-card {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.grupo__clima-icono {
+    width: 40px;
+    height: 40px;
+}
+
 /*--- Estilos de validacion ---*/
 
 .formulario__grupo-correcto .formulario__validacion-estado {
@@ -534,7 +557,7 @@ a {
     }
 
     .titulo__item {
-        padding-top: 0.7rem;
+     grid-column: 1 / 1;     padding-top: 0.7rem;
     }
 
     .menu__destacado {
@@ -558,13 +581,11 @@ a {
     /*--- Contacto ---*/
 
     .formulario {
-        grid-template-columns: 1fr;
-        gap: unset;
-        row-gap: 1.5rem;
+        display: block;
     }
 
     .formulario__grupo {
-        grid-column: 1 / 1;
+        width: 100%;
     }
 
 }

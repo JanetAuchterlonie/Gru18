@@ -3,11 +3,12 @@ const inputs = document.querySelectorAll('#formulario input');
 
 formulario.reset();	
 
+// Objeto con expreciones regulares.
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
   telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-	fecha: /^\2(\d{4})(\/|-)(0[1-9]|1[0-2])(\/|-)([0-2][0-9]|3[0-1])$/, 
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+	fecha: /^\2(\d{4})(\/|-)(0[1-9]|1[0-2])(\/|-)([0-2][0-9]|3[0-1])$/, // Fecha aaaa-mm-dd.
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/ // Email 
 } 
 
 const campos = {
@@ -74,6 +75,7 @@ formulario.addEventListener('submit', (e) => {
 
 		formulario.reset();
 
+		document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
